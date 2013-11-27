@@ -61,14 +61,18 @@ article ul {
 	user-select: none;
 	counter-reset: slide;
 }
+[class^="menu-"].pinned {
+	background-color: rgba(93,93,93,.4);
+}
 
 [class^="menu-"] li {
 	color: white;
 	background: rgba(255,255,255,.1);
-	transition: background-color .2s ease;
+	transition: background-color .3s ease;
 	cursor: pointer;
 	counter-increment: slide;
 }
+[class^="menu-"].pinned li { background-color: rgba(0,0,0,.1); } 
 [class^="menu-"] li > :first-child {
 	color: #fff;
 	text-decoration: none;
@@ -87,7 +91,7 @@ article ul {
 	top: 5%;
 	width: 150px;
 	left: -140px;
-	transition: left .5s ease-in-out;
+	transition: left .5s ease-in-out, background-color .3s ease;
 	overflow-x: hidden;
 	overflow-y: auto;
 	border-bottom-right-radius: 2px;
@@ -120,7 +124,7 @@ article ul {
 	left: 5%;
 	height: 110px;
 	bottom: -85px;
-	transition: bottom .5s ease-in-out;
+	transition: bottom .5s ease-in-out, background-color .3s ease;
 	overflow-x: auto;
 	overflow-y: hidden;
 	border-top-left-radius: 2px;
